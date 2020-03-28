@@ -18,6 +18,8 @@ void main() {
 }
 
 //test commit dekho
+//ab commit krny k bad ctrl+shift+k press kro gy to push ho jaye gi sari changng
+//tick pr click krna hai 1 bar commit krdena, us k bad ctrl +shift+k press kr k push kr dena project
 class DiceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
