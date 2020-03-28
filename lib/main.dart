@@ -43,6 +43,7 @@ class _DiceAppState extends State<DiceApp> {
           Expanded(
             flex: 1,
             child: FlatButton(
+              splashColor: Colors.orangeAccent,
               onPressed: () {
                numi();
               },
@@ -52,10 +53,14 @@ class _DiceAppState extends State<DiceApp> {
           Expanded(
             flex: 1,
             child: FlatButton(
+              splashColor: Colors.black,
+
               onPressed: () {
                 numi();
+
               },
               child: Image.asset('images/dice$numm.png'),
+
             ),
           ),
         ],
