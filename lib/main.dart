@@ -1,4 +1,6 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(
@@ -17,28 +19,46 @@ void main() {
   );
 }
 
+class DiceApp extends StatefulWidget {
+  @override
+  _DiceAppState createState() => _DiceAppState();
+}
 
-class DiceApp extends StatelessWidget {
+class _DiceAppState extends State<DiceApp> {
+  int num = 2;
+  int numm=1;
+  void numi()
+  {
+    setState(() {
+      num=Random().nextInt(6)+1;
+      numm=Random().nextInt(6)+1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Center(
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              flex: 1,
-              child: Image.asset('images/dice1.png'),
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+               numi();
+              },
+              child: Image.asset('images/dice$num.png'),
             ),
-            SizedBox(
-              width: 16.0,
+          ),
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+                numi();
+              },
+              child: Image.asset('images/dice$numm.png'),
             ),
-            Expanded(
-              flex: 1,
-              child: Image.asset('images/dice2.png'),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
